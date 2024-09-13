@@ -3,6 +3,20 @@ let content = "JBJKBWJBG JKWBJKWB@";
 let rootdiv = ReactDOM.createRoot(root);
 
 let Component = () => {
+    setTimeout(()=>{        
+        let clicked = false;
+        document.querySelector('#menu').addEventListener('click', function() {
+            if(!clicked) {
+                document.querySelector('.list').style.display = 'block';
+                clicked = true;
+            }
+            else {
+                document.querySelector('.list').style.display = 'none';
+                clicked = false;
+            }
+        });
+},0);
+        
   return (
     <div className="parent overflow-x-hidden bg-gray-100">
       <nav className="flex justify-between items-center p-2 gradient border-b border-slate-300 relative">
